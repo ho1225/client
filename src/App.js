@@ -1,8 +1,14 @@
 import React from 'react';
 import { Container, AppBar, Typography, Grow, Grid } from '@material-ui/core';
 
-import memories from './images/memories.png'
+import Posts from './components/Posts/Posts';
+import Form from './components/Form/Form';
+import memories from './images/memories.png';
+import useStyles from './styles';
+
 const App = () => {
+    const classes = useStyles();
+
     return (
         <Container maxwidth="lg">
             <AppBar position="static" color="inherit">
@@ -13,10 +19,10 @@ const App = () => {
                 <Container>
                     <Grid container justify="space-between" alignItems="stretch" spacing>
                         <Grid item xs={12} sm={7}>
-                            123
+                            <Posts />
                         </Grid>
                         <Grid item xs={12} sm={4}>
-                            1123
+                            <Form />
                         </Grid>
                     </Grid>
                 </Container>
